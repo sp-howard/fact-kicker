@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "authors": [
+    "Steven Howard <stevenphoward@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
