@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  var snd = new Audio("/sound/punch.mp3");
+  var snd = new Audio('punch.mp3'),
+      bomb = new Audio('bomb.mp3');
 
   function kick() {
     $('#talkbubble').hide(300);
@@ -50,5 +51,17 @@ $(document).ready(function() {
     kick();
   });
 
+  $('.title-container').click(function() {
+    $('.explosion').attr('src', './img/explosion.gif');
+    $('.explosion').show();
+    $(this).addClass('pop');
+    bomb.play();
+    setTimeout(function () {
+      $('.title-container').removeClass('pop');
+      $('.explosion').removeAttr('src');
+      $('.explosion').hide();
+    }, 800);
+
+  })
 
 });
